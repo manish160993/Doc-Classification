@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>DocumentClassification</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            console.log()
+            $("#results").toggle();
+          });
+        });
+      </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Document Classfication</a>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent"></div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://www.linkedin.com/in/manish-biyani/">LinkedIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/manish160993">GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://leetcode.com/manish160993/">LeetCode</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+      <div  class="container">
+        <h1 class="display-4">Document Classification</h1>
+        <p class="lead">This website will classfiy the document based on the content in document.</p>
+        <hr class="my-4">
+        <p>Please copy the contents of the document.</p>
+        <form method="POST" action="/predict" enctype="text/html">
+          <div>
+              <textarea rows = "5" cols = "60" name = "input_data">Enter the data...</textarea><br>
+          </div>
+          <br>
+          <input type="submit" value="Predict Document Type">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
